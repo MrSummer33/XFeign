@@ -1,5 +1,6 @@
 package com.xiaxi.feign.config;
 
+import com.xiaxi.feign.beanFactoryPostProcessor.XFeignBeanFactoryPostProcessor;
 import com.xiaxi.feign.beanPostProcessor.XFeignBeanPostProcessor;
 
 import org.springframework.context.annotation.Bean;
@@ -14,5 +15,10 @@ public class XFeignConfig {
     @Bean
     public XFeignBeanPostProcessor xFeignBeanPostProcessor(){
         return new XFeignBeanPostProcessor();
+    }
+
+    @Bean
+    public XFeignBeanFactoryPostProcessor xFeignBeanFactoryPostProcessor(){
+        return new XFeignBeanFactoryPostProcessor();
     }
 }
