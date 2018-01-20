@@ -1,0 +1,7 @@
+server:
+  port: 19091
+
+
+xfeign:
+  server:
+    host: http://localhost:19090
